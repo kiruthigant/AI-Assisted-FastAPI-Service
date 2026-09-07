@@ -21,7 +21,7 @@ class LLMService:
             if not api_key:
                 raise ValueError("GEMINI_API_KEY is not set.")
             genai.configure(api_key=api_key)
-            self.model = genai.GenerativeModel('gemini-pro')
+            self.model = genai.GenerativeModel('gemini-flash-latest')
         else:
             raise ValueError("Invalid LLM_PROVIDER specified. Use 'openai' or 'gemini'.")
 
